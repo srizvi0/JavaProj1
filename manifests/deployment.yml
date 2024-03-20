@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: srizvijavaproj 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: srizvijavaproj
+  template:
+    metadata:
+      labels:
+        app: srizvijavaproj 
+    spec:
+      containers:
+        - name: srizvijavaproj 
+          image: congre14.azurecr.io/srizvijavaproj
+          ports:
+          - containerPort: 80
